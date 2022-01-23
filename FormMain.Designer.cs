@@ -37,6 +37,9 @@ namespace DBTool
             this.buttonFindDependecies = new System.Windows.Forms.Button();
             this.textBoxFunctional = new System.Windows.Forms.TextBox();
             this.textBoxMultivalued = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numericUpDowntTextSize = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDowntTextSize)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxInput
@@ -106,22 +109,45 @@ namespace DBTool
             this.textBoxFunctional.Size = new System.Drawing.Size(167, 216);
             this.textBoxFunctional.TabIndex = 6;
             // 
-            // textBoxMultivaluated
+            // textBoxMultivalued
             // 
             this.textBoxMultivalued.Location = new System.Drawing.Point(488, 61);
             this.textBoxMultivalued.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxMultivalued.Multiline = true;
-            this.textBoxMultivalued.Name = "textBoxMultivaluated";
-            this.textBoxMultivalued.ReadOnly = true;
+            this.textBoxMultivalued.Name = "textBoxMultivalued";
             this.textBoxMultivalued.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBoxMultivalued.Size = new System.Drawing.Size(167, 216);
             this.textBoxMultivalued.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(50, 388);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 15);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Text size:";
+            // 
+            // numericUpDowntTextSize
+            // 
+            this.numericUpDowntTextSize.Location = new System.Drawing.Point(110, 388);
+            this.numericUpDowntTextSize.Name = "numericUpDowntTextSize";
+            this.numericUpDowntTextSize.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDowntTextSize.TabIndex = 9;
+            this.numericUpDowntTextSize.Value = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numericUpDowntTextSize.ValueChanged += new System.EventHandler(this.numericUpDowntTextSize_ValueChanged);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 421);
+            this.Controls.Add(this.numericUpDowntTextSize);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxMultivalued);
             this.Controls.Add(this.textBoxFunctional);
             this.Controls.Add(this.buttonFindDependecies);
@@ -133,6 +159,7 @@ namespace DBTool
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormMain";
             this.Text = "FormMain";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDowntTextSize)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +175,7 @@ namespace DBTool
         private System.Windows.Forms.Button buttonFindDependecies;
         private System.Windows.Forms.TextBox textBoxFunctional;
         private System.Windows.Forms.TextBox textBoxMultivalued;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown numericUpDowntTextSize;
     }
 }

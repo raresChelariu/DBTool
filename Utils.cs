@@ -25,6 +25,8 @@ namespace DBTool
             {
                 DataRow tableRow = result.NewRow();
                 var colValues = csvStringLines[i].Split(',');
+                if (colValues.Length != headerColumns.Length)
+                    return null;
                 for (var j = 0; j < colValues.Length; j++)
                 {
                     tableRow.SetField(j, colValues[j].Trim());

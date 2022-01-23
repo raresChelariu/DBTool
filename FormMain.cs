@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace DBTool
 {
@@ -32,6 +33,11 @@ namespace DBTool
         private void buttonFindDependecies_Click(object sender, EventArgs e)
         {
             var dataTable = Utils.CSV2DataTable(textBoxInput.Text);
+            if (dataTable == null)
+            {
+                MessageBox.Show("Input is not properly formatted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             var attributeNo = dataTable.Columns.Count;
 
@@ -56,6 +62,19 @@ namespace DBTool
 
             textBoxMultivalued.Text = Dependency.FromDependecyListToString(validMultivaluedDependencies, DependencyType.Multivalued, attributeNames);
 
+        }
+
+        private void numericUpDowntTextSize_ValueChanged(object sender, EventArgs e)
+        {
+            if (numericUpDowntTextSize.Value <= 0)
+                return;
+            UpdateTextSizeForTextbox(textBoxInput);
+            UpdateTextSizeForTextbox(textBoxFunctional);
+            UpdateTextSizeForTextbox(textBoxMultivalued);
+        }
+        private void UpdateTextSizeForTextbox(TextBox textBox)
+        {
+            textBox.Font = new Font(textBox.Font.FontFamily, (float)numericUpDowntTextSize.Value);
         }
     }
 }
