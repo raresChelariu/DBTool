@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBTool", "DBTool.csproj", "{AD3364BB-DA14-4B7C-9E86-E0CF8EE835DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD3364BB-DA14-4B7C-9E86-E0CF8EE835DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD3364BB-DA14-4B7C-9E86-E0CF8EE835DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD3364BB-DA14-4B7C-9E86-E0CF8EE835DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD3364BB-DA14-4B7C-9E86-E0CF8EE835DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CCDD0161-776F-445C-8228-5623B89B1269}
+	EndGlobalSection
+EndGlobal
